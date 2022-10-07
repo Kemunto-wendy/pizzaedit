@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   get "/restaurant_pizza", to: "restaurant_pizza#index"
   # root "articles#index"
+  get '/pizza/:id/summary', to: 'pizza#summary'
 end
