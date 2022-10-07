@@ -1,5 +1,6 @@
 class PizzaController < ApplicationController
   def index
-    render json: {hello: "Welcome to our pizza restaurant", name: "kempinski"}
+    pizzas = Pizza.all
+    render json: pizzas
   end
 end
