@@ -21,4 +21,9 @@ end
     Pizza.create(name: 'Egg Cavia', ingredients: 'Mozzarella, Caviar, Egg, Dill, Black pepper')
     Pizza.create(name: 'Lemonade', ingredients:'Tomato sauce, Cheese, Russian ham, Pineapple, Herbs')
 
+    Restaurant.create(name: 'Kempinski', address:'Nairobi 00100')
+    Restaurant.create(name: 'Kienyeji store', address:'Ngong Road 13456')
+    Restaurant.create(name: 'Manhattan', address:'NairobiCBD 56889')
+    Restaurant.create(name: 'Avenida', address:'Nairobi 10321')
+
 puts 'end'
