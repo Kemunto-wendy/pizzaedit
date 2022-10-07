@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     get "/restaurant", to: "restaurant#index"
     resources :restaurants, only: [:index,:show,:destroy]
   # Defines the root path route ("/")
+
+  get "/restaurant_pizza", to: "restaurant_pizza#index"
   # root "articles#index"
 end
