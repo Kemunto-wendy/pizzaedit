@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+puts 'start'
+10.times do
+    RestaurantPizza.create(
+        price: rand(1..30),
+        pizza_id: rand(1..4),
+        restaurant_id: rand(1..5)
+    )
+end
+
+    Pizza.create(name: 'Barbeque Pizza', ingredients: 'Onions, Cheese, Olive oil, baked piece of dough')
+    Pizza.create(name: 'Chicken Peperoni', ingredients: 'Tomato sauce, Cheese, Artichokes, Roasted bell pepper, Black olives, Onions, Oregano')
+    Pizza.create(name: 'Egg Cavia', ingredients: 'Mozzarella, Caviar, Egg, Dill, Black pepper')
+    Pizza.create(name: 'Lemonade', ingredients:'Tomato sauce, Cheese, Russian ham, Pineapple, Herbs')
+
+puts 'end'
