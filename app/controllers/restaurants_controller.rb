@@ -6,20 +6,19 @@ class RestaurantsController < ApplicationController
       render json: restaurants, include: ['']
   end
 
-  def show
-    restaurant = Restaurant.find(id: params[:id])
-    if restaurant
-      render json: restaurant
-    else
-      render json: { error: "Restaurant not found" }, status: :not_found
-    end
+    def show
+      restaurant = Restaurant.find(params[:id])
+      render json: restaurant, include: ['pizzas']
   end
 
   def destroy
-      restaurant = Restaurant.find(params[:id])
+      restaurant = Restaurant.find_by(id: params[:id])
+      if restaurant
       restaurant.destroy
-      render json: restaurant.piza
+      else
+      render json: {error: "Restaurant not found"}, status: :not_found
   end
+end
 
   private
 
