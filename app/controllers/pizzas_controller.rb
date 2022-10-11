@@ -3,4 +3,10 @@ class PizzasController < ApplicationController
     pizzas = Pizza.all
     render json: pizzas
   end
+
+  def show
+    pizza = Pizza.find(params[:id])
+    render json: pizza,  status: :ok
+end
+
 end
